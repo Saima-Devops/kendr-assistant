@@ -1,0 +1,36 @@
+
+Kubernetes — image pull failure
+
+Normal   Pulling  Pulling image "saim2026/myapp:v99"
+Warning  Failed   Failed to pull image "saim2026/myapp:v99": manifest unknown
+Warning  Failed   Error: ErrImagePull
+Normal   BackOff  Back-off pulling image "saim2026/myapp:v99"
+Warning  Failed   Error: ImagePullBackOff
+
+---
+
+Python — missing dependency
+
+Traceback (most recent call last):
+  File "app.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+
+---
+
+Application — database authentication failed
+
+2026-11-14 10:20:01 INFO Starting application
+2026-11-14 10:20:02 ERROR Database connection failed
+psycopg2.OperationalError: connection to server at "db", port 5432 failed: FATAL: password authentication failed for user "appuser"
+2026-11-14 10:20:02 ERROR Application startup aborted
+
+---
+
+CI/CD — Docker build failed
+
+Step 5/8 : RUN npm ci
+npm error code EUSAGE
+npm error The `npm ci` command can only install with an existing package-lock.json or npm-shrinkwrap.json with lockfileVersion >= 1.
+ERROR: process "/bin/sh -c npm ci" did not complete successfully: exit code: 1
+Error: Process completed with exit code 1.
